@@ -23,5 +23,17 @@
     echo "<br><br>";
     ?>
   </div>
+
+  <div class="container-paragrafo-censurato">
+    <?php
+    // Censura la parola nel paragrafo con ***
+    $paragrafoCensurato = str_ireplace($parolaCensurata, '***', $paragrafo);
+    // Stampo il paragrafo censurato e la sua lunghezza
+    echo "<h2>Paragrafo censurato:</h2>";
+    echo $paragrafoCensurato;
+    echo "<br>";
+    echo "Lunghezza del paragrafo censurato: " . strlen($paragrafoCensurato) . " caratteri";
+    ?>
+  </div>
 </body>
 </html>
