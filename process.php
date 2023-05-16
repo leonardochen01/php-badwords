@@ -1,3 +1,9 @@
+<?php
+  // Ottenengo i dati inviati dal form
+  $paragrafo = $_POST["paragrafo"];
+  $parolaCensurata = $_POST["parola_censurata"];
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -7,8 +13,15 @@
   <title>Elaborazione</title>
 </head>
 <body>
-<?php
-
-?>
+  <div class="container-paragrafo-originale">
+    <?php
+    // Stampo il paragrafo e la sua lunghezza
+    echo "<h2>Paragrafo originale:</h2>";
+    echo $paragrafo;
+    echo "<br>";
+    echo "Lunghezza del paragrafo: " . strlen($paragrafo) . " caratteri";
+    echo "<br><br>";
+    ?>
+  </div>
 </body>
 </html>
